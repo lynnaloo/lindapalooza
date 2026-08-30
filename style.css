@@ -87,10 +87,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.04; }
    HERO (home)
    ============================================================ */
 .hero { position: relative; }
-.hero-inner { padding: 44px 0 88px; position: relative; z-index: 1; max-width: 33rem; }
+.hero-inner { padding: 44px 0 88px; position: relative; z-index: 1; }
 .hero h1 { font-size: clamp(48px, 10vw, 104px); margin: 0 0 26px; color: var(--ink); letter-spacing: -0.01em; }
 .hero h1 em { font-style: italic; color: var(--blue); }
-.hero .lede { font-size: 20px; line-height: 1.6; color: var(--ink-2); margin: 0 0 34px; max-width: 30rem; }
+.hero .lede { font-size: 20px; line-height: 1.6; color: var(--ink-2); margin: 0 0 34px; }
 .hero .lede strong { color: var(--ink); font-weight: 700; }
 
 /* line motif: thin diagonal hatch fading into the top-right corner */
