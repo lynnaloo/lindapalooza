@@ -204,6 +204,17 @@ section.block > h2::before { content: ""; width: 22px; height: 3px; border-radiu
 .card h3 { position: relative; z-index: 1; font-size: 25px; margin: 0 0 8px; color: var(--ink); }
 .card p { position: relative; z-index: 1; margin: 0; color: var(--ink-2); font-size: 15px; }
 
+/* home highlights */
+.hl-list { display: grid; gap: 18px; }
+.hl-role { display: block; font-family: var(--display); font-size: 21px; color: var(--ink); }
+.hl-role a { color: var(--blue); }
+.hl-role a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.hl-desc { display: block; color: var(--ink-2); font-size: 15px; margin-top: 3px; }
+.hl-sub { font-family: var(--body); font-weight: 700; text-transform: uppercase; letter-spacing: .16em; font-size: 12px; color: var(--blue); margin: 30px 0 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.tag { font-family: var(--body); font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 15px; }
+.tag-more { color: var(--ink-2); font-size: 14px; }
+
 /* footer */
 footer {
   border-top: 1px solid var(--line); margin-top: 64px; padding: 26px 0 60px;
