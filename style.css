@@ -25,26 +25,11 @@
   --body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:        #141b15;
-    --surface:   #1b241c;
-    --ink:       #eef1e9;
-    --ink-2:     #b4beb0;
-    --ink-3:     #879386;
-    --accent:    #6ea9c2;
-    --accent-600:#5a93ab;
-    --accent-lt: rgba(110,159,181,.14);
-    --tan:       #b9a98c;
-    --amber:     #d79a52;
-    --land:      #7cb08a;
-    --border:    rgba(238,241,233,.14);
-  }
-}
+/* Light-only, like Landkeep + The Little Lot (no dark-mode variant). */
 
 /* ---- base ---- */
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; color-scheme: light; }
 body {
   margin: 0;
   font-family: var(--body);
