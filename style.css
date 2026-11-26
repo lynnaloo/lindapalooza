@@ -7,7 +7,9 @@
 
 :root {
   --bg:        #f0ede6;   /* page (tan-lt) */
-  --surface:   #f7f4ef;   /* cards */
+  --surface:   #f7f4ef;
+  --card:      #ffffff;   /* cards: pop against the cream page */
+  --tint:      #e6f0f4;   /* soft blue band (Landkeep water-lt) */
   --ink:       #1c2b1e;   /* deep green */
   --ink-2:     #4a5c4d;
   --ink-3:     #7a8c7d;
@@ -78,7 +80,7 @@ h2, h3 { font-family: var(--body); }
 .btn {
   display: inline-block; padding: 12px 22px; border-radius: var(--radius);
   font-family: var(--body); font-weight: 600; font-size: 14px;
-  border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+  border: 1px solid var(--border); background: var(--card); color: var(--ink);
   transition: border-color .15s ease, background .15s ease, color .15s ease;
 }
 .btn:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); background: var(--accent-lt); }
@@ -102,7 +104,7 @@ h2, h3 { font-family: var(--body); }
 .cover-links { display: flex; flex-wrap: wrap; gap: 9px; }
 .chip {
   font-size: 13px; font-weight: 500; padding: 6px 13px; border-radius: var(--radius);
-  border: 1px solid var(--border); color: var(--ink-2); background: var(--surface);
+  border: 1px solid var(--border); color: var(--ink-2); background: var(--card);
   transition: border-color .15s ease, color .15s ease;
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
@@ -111,13 +113,22 @@ h2, h3 { font-family: var(--body); }
 main { padding: 4px 0 0; }
 
 .note {
-  font-size: 15px; color: var(--ink-2); background: var(--surface);
+  font-size: 15px; color: var(--ink-2); background: var(--card);
   border: 1px solid var(--border); border-left: 3px solid var(--accent);
   border-radius: var(--radius); padding: 14px 18px; margin: 28px 0 0;
 }
 .note code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--accent); }
 
-section.block { margin: 52px 0; }
+section.block { margin: 0; padding: 46px 0; }
+section.cards { padding: 46px 0; }
+
+/* full-bleed section bands (keep content centered, extend color edge-to-edge) */
+.band-white, .band-tint {
+  box-shadow: 0 0 0 100vmax var(--b);
+  clip-path: inset(0 -100vmax);
+}
+.band-white { --b: var(--card); background: var(--card); }
+.band-tint  { --b: var(--tint);  background: var(--tint); }
 section.block > h2 {
   display: flex; align-items: center; gap: 10px;
   font-weight: 600; text-transform: uppercase; letter-spacing: .13em; font-size: 13px;
@@ -127,7 +138,7 @@ section.block > h2::before { content: ""; width: 9px; height: 9px; background: v
 
 /* cards */
 .bio-card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 22px 24px; margin-bottom: 16px; transition: border-color .15s ease;
 }
 .bio-card:hover { border-color: var(--accent); }
@@ -158,13 +169,13 @@ section.block > h2::before { content: ""; width: 9px; height: 9px; background: v
 .hl-desc { display: block; color: var(--ink-2); font-size: 14px; margin-top: 2px; }
 .hl-sub { font-weight: 600; text-transform: uppercase; letter-spacing: .13em; font-size: 12px; color: var(--accent); margin: 28px 0 12px; }
 .tags { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; }
-.tag { font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 13px; }
+.tag { font-size: 14px; color: var(--ink); background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px 13px; }
 .tag-more { color: var(--ink-3); font-size: 14px; }
 
 /* home cards */
-.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 40px 0; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 0; }
 .card {
-  display: block; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 24px; color: var(--ink); transition: border-color .15s ease;
 }
 .card:hover { border-color: var(--accent); text-decoration: none; }
